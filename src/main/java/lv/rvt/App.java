@@ -4,26 +4,26 @@ import java.util.*;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-                Scanner scanner = new Scanner(System.in);
+    public class DivisibleByThree {
 
-                System.out.print("How many times do you want to print your text? ");
-                int times = scanner.nextInt();
-    
-                int count = 0;
-    
-                while (count < times) {
-                    printText();
-                    count++;
+        public static void divisibleByThreeInRange(int beginning, int end) {
+            for (int i = beginning; i <= end; i++) {
+                if (i % 3 == 0) {
+                    System.out.println(i);
                 }
-                scanner.close();
-            }
-        
-            public static void printText() {
-                System.out.println("In a hole in the ground there lived a method");
             }
         }
+    
+        public static void main(String[] args) {
+            // Example usage
+            divisibleByThreeInRange(3, 6);
+            System.out.println();
+            divisibleByThreeInRange(2, 10);
+        }
+    }
+    
+    }
+    
         
     
         
