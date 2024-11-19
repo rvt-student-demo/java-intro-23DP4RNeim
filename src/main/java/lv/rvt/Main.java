@@ -1,8 +1,33 @@
-package lv.rvt;
+ package lv.rvt;
 
-// import java.util.*;
+// public class DecreasingCounter {
+//    private int value;
 
-public class App {
+//     public DecreasingCounter(int initialValue) {
+//         this.value = initialValue;
+
+//     }
+
+
+//     public void printValue() {
+//         System.out.println("value: " + this.value);
+//     }
+
+//     public void decrement() {
+//         if (this.value > 0){
+//             this.value -= 1;
+//         }
+//     }
+
+
+
+//     public void reset() {
+//         this.value = 0;
+
+//     }
+// }
+
+public class Main {
     public static void main(String[] args) {
         // Create the cards with initial balances
         PaymentCard paulsCard = new PaymentCard(20);
@@ -41,9 +66,4 @@ public class App {
     }
 }
 
-    
-        
-    
-        
-            
-    
+
