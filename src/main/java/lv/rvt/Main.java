@@ -1,5 +1,5 @@
-  package lv.rvt;
-import lv.rvt.Book;
+package lv.rvt;
+
 // // public class DecreasingCounter {
 // //    private int value;
 
@@ -59,71 +59,102 @@ import lv.rvt.Book;
 
 
 
-import java.util.ArrayList;
-import java.util.Scanner;
+// import java.util.ArrayList;
+// import java.util.Scanner;
 
-class Book {
-    String title;
-    int pages;
-    int year;
+// class Book {
+//     String title;
+//     int pages;
+//     int year;
 
-    public Book(String title, int pages, int year) {
-        this.title = title;
-        this.pages = pages;
-        this.year = year;
-    }
+//     public Book(String title, int pages, int year) {
+//         this.title = title;
+//         this.pages = pages;
+//         this.year = year;
+//     }
 
-    public String getTitle() {
-        return title;
-    }
+//     public String getTitle() {
+//         return title;
+//     }
 
-    public int getPages() {
-        return pages;
-    }
+//     public int getPages() {
+//         return pages;
+//     }
 
-    public int getYear() {
-        return year;
-    }
-}
+//     public int getYear() {
+//         return year;
+//     }
+// }
+
+// public class Main {
+//         public static void main(String[] args) {
+//             Scanner scanner = new Scanner(System.in);
+    
+//             ArrayList<Book> books = new ArrayList<>();
+//             books.add(new Book("To Kill a Mockingbird", 281, 1960));
+//             books.add(new Book("A Brief History of Time", 256, 1988));
+//             books.add(new Book("Beautiful Code", 593, 2007));
+//             books.add(new Book("The Name of the Wind", 662, 2007));
+    
+//             System.out.println("Choose a book (1-4):");
+//             for (int i = 0; i < books.size(); i++) {
+//                 System.out.println((i + 1) + ". " + books.get(i).getTitle());
+//             }
+    
+//             int choice = Integer.parseInt(scanner.nextLine());
+    
+//             if (choice < 1 || choice > 4) {
+//                 System.out.println("Invalid choice. Exiting program.");
+//                 scanner.close();
+//                 return;
+//             }
+    
+//             Book selectedBook = books.get(choice - 1);  
+    
+//             System.out.print("What information will be printed? ");
+//             String infoChoice = scanner.nextLine();
+    
+//             if (infoChoice.equals("everything")) {
+//                 System.out.println(selectedBook.getBookInfo());
+//             } else if (infoChoice.equals("name")) {
+//                 System.out.println(selectedBook.getTitle());
+//             } else {
+//                 System.out.println("Invalid option.");
+//             }
+    
+//             scanner.close();
+//         }
+//     }
 
 public class Main {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-    
-            ArrayList<Book> books = new ArrayList<>();
-            books.add(new Book("To Kill a Mockingbird", 281, 1960));
-            books.add(new Book("A Brief History of Time", 256, 1988));
-            books.add(new Book("Beautiful Code", 593, 2007));
-            books.add(new Book("The Name of the Wind", 662, 2007));
-    
-            System.out.println("Choose a book (1-4):");
-            for (int i = 0; i < books.size(); i++) {
-                System.out.println((i + 1) + ". " + books.get(i).getTitle());
-            }
-    
-            int choice = Integer.parseInt(scanner.nextLine());
-    
-            if (choice < 1 || choice > 4) {
-                System.out.println("Invalid choice. Exiting program.");
-                scanner.close();
-                return;
-            }
-    
-            Book selectedBook = books.get(choice - 1);  
-    
-            System.out.print("What information will be printed? ");
-            String infoChoice = scanner.nextLine();
-    
-            if (infoChoice.equals("everything")) {
-                System.out.println(selectedBook.getBookInfo());
-            } else if (infoChoice.equals("name")) {
-                System.out.println(selectedBook.getTitle());
-            } else {
-                System.out.println("Invalid option.");
-            }
-    
-            scanner.close();
-        }
-    }
+public static void main(String[] args) {
+  HealthStation childrensHospital = new HealthStation();
 
+  Person ethan = new Person("Ethan", 1, 110, 7);
+  Person peter = new Person("Peter", 33, 176, 85);
 
+  System.out.println("weighings performed: " + childrensHospital.weighings());
+
+  System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+  System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+
+  System.out.println("weighings performed: " + childrensHospital.weighings());
+
+  childrensHospital.feed(ethan);
+  childrensHospital.feed(ethan);
+  childrensHospital.feed(ethan);
+
+  System.out.println();
+
+  System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+  System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+
+  System.out.println("weighings performed: " + childrensHospital.weighings());
+
+  childrensHospital.weigh(ethan);
+  childrensHospital.weigh(ethan);
+  childrensHospital.weigh(ethan);
+
+  System.out.println("weighings performed: " + childrensHospital.weighings());
+}
+}
